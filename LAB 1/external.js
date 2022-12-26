@@ -1,5 +1,5 @@
-console.log(number1);
-var number1=3;
+console.log( typeof number1);
+let number1=3;
 number2=2.9;
 var number3=0xff;
 var firstname=["Hesham"];
