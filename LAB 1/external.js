@@ -1,5 +1,4 @@
-console.log( typeof number1);
-let number1=3;
+var number1=3;
 number2=2.9;
 var number3=0xff;
 var firstname=["Hesham"];
@@ -19,5 +18,5 @@ console.log(number1*flag);  3*1;
 console.log(number1/lastname);  //NaN not a number
 console.log(firstname+" "+middlename+" "+lastname);
 console.log(`${firstname} ${middlename} ${lastname}`);
-console.log(numbers);
+console.log(numbers*5);
 console.log("This the external JS file");
