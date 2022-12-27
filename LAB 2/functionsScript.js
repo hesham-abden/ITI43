@@ -2,7 +2,7 @@
 // console.log(localvar);   //error 'function scope' [before calling the function]
 // console.log(testingvar);  // error '           [before calling the function]
 // console.log(localvar); // error without initialization with keyword (let) 
-let localvar=90;
+ let localvar=90;
 // console.log(localvar); //local var=90;
 function printVariables(value1=999,value2=999,value3=999) //solving the undefinied problem
 {   
@@ -21,9 +21,10 @@ function printprompt(given_name,number1,number2)
     given_name=prompt("Enter Name");
 	  
     
-} while (given_name=="");
+} while (given_name==""||given_name==null);
     number1=prompt("Enter Number 1");
     number2=prompt("Enter Number 2");
+    console.log(given_name);
     console.log(`Result= ${parseInt(number1)+parseInt(number2)}`);
 
 }

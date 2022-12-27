@@ -12,5 +12,5 @@ console.log(localvar); //localvar=90; 'Global variable'
 // // console.log(localvar);   //error 'function scope' [after calling the function]
 // console.log(testingvar);  // works 'global scope';    [after calling the function]
 
-printprompt();
+// printprompt();
 
