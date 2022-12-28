@@ -72,3 +72,9 @@ const Randonum=function(size)
     }
 return arrayofrandos;
 }
+
+ const  CurrentMonth=function()
+ {
+    let month=Date().split(" ");
+    return month[1];
+ }
