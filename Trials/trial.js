@@ -1,7 +1,3 @@
-x=5;
-function variable()
-{console.log(x);}
-
 
 
 

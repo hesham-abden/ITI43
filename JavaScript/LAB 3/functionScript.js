@@ -1,6 +1,6 @@
 const PascalCase=function(inputvalue)
 {      
-    inputvalue=String(inputvalue); //making sure the input is string 
+    inputvalue=new String(inputvalue); //making sure the input is string 
     let resultname =inputvalue[0].toUpperCase();
     
         for(let i=1;i<inputvalue.length;i++)
