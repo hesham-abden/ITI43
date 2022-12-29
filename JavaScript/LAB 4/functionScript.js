@@ -10,3 +10,11 @@ let maxnum=Math.max(...numarray);
 let minnum=Math.min(...numarray);
 let norepeted=numarray.filter(nofun);
 
+// const removerepeted=function(array)   // alternative way to remove repeated "looping".
+// {
+//     let newarray=[];
+//     for(i of array)
+//     if(!(array[i] in newarray) )
+//     {newarray.push(array[i]);}
+// return newarray;
+// }
