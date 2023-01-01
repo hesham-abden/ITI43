@@ -1,0 +1,25 @@
+h1{color: blueviolet;}
+
+#d2{
+background-color: whitesmoke;
+color: blue;
+width: fit-content;
+height: fit-content;
+font-size: x-large;
+font-weight: 900;
+font-family:"Papyrus";
+border: 5px solid tan;
+padding: 50px;
+margin: 40px;
+outline: 10px rebeccapurple solid;
+position:relative;
+left: 40%;
+top: 100px;
+}
+
+#d2::first-letter
+{
+color: black;
+font-size: xx-large;
+}
+

@@ -10,7 +10,7 @@ let maxnum=Math.max(...numarray);
 let minnum=Math.min(...numarray);
 let norepeted=numarray.filter(nofun);
 
-// const removerepeted=function(array)   // alternative way to remove repeated "looping".
+// const removerepeted=function(array)   // alternative way to remove repeated ""
 // {
 //     let newarray=[];
 //     for(i of array)
