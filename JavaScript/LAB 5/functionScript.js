@@ -32,5 +32,3 @@ intervalID=setInterval(()=>{count++;if(count>6) count=1;
     clearInterval(IntervalID);
    }
 
-
-/*TASK 4 */
