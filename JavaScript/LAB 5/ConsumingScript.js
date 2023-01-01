@@ -1,3 +1,3 @@
-const fillform=function(){
-console.log( document.querySelector("input[name='userName']").value);
-}
+// const fillform=function(){
+// console.log( document.querySelector("input[name='userName']").value);
+// }gi
