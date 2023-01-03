@@ -16,14 +16,17 @@ for(let i=0;i<8;i++)
 newimg[i]=new Image;
 newimg[i].src=`images/${i+1}.jpg`
 }
-let count=0;
+
 let StartSliding=function(ObjIMG)
 { 
-intervalID=setInterval(()=>{count++;if(count>6) count=1;
+let count=0;
+intervalID=setInterval(()=>{count++;if(count>100) count=1;
 
-  document.images[0].src=ObjIMG[count-1].src;
-  document.images[1].src=ObjIMG[count].src
-  document.images[2].src=ObjIMG[count+1].src},500);
+  document.images[0].src=ObjIMG[0].src;
+  moveLeft(count*5);console.log(document.images[0].offsetParent);
+
+},50); 
+// console.log(document.images[0].offsetLeft);
 
     return intervalID;
    }
@@ -32,3 +35,6 @@ intervalID=setInterval(()=>{count++;if(count>6) count=1;
     clearInterval(IntervalID);
    }
 
+const moveLeft=function(pixel){
+  document.querySelector("img").style.top=pixel+"px";
+}

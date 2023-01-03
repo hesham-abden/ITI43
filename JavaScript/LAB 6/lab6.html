@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+  
+<style>
+        body {
+            margin: 70px 300px;
+            font-family: Andalus;
+            font-size:x-large;
+            font-weight:bold;
+			background-color:lightcyan;
+        }
+        [type=text],[type=button]
+        {
+            font-family:'Century Gothic';
+            font-size:large;
+        }
+        .hidden
+        {
+            display:none;
+        }
+        table {
+            width: 500px;;
+            border: 3px;
+            border-color: black;
+            border-style:solid;
+        
+        }
+        span{ color:red;display:none;
+            font-size: 10px;                     }
+        .SD {
+            background-color: lightpink;
+        }
+
+        .OS {
+            background-color: lightyellow;
+        }
+
+        .EL {
+            background-color: lightskyblue;
+        }
+        
+    </style>
+
+         
+    
+</head>
+<body>
+ 
+    <form style="font-family: Papyrus; font-size:large;">
+        <table>
+            <tr>
+                <td colspan="2">
+                    Department:
+                    <input type="radio" name="Department" value="SD" checked="checked" />SD
+                    <input type="radio" name="Department" value="OS" />OS
+                    <input type="radio" name="Department" value="EL" />EL
+                </td>
+            </tr>
+            <tr><td>StudentName<input type="text" name="studentName" value="Eman" /></td><td><span id="nameError">Required/Already Exists</span></td></tr>
+            <tr><td>StudentGrade<input type="text" name="studentGrade" value="50" /></td><td><span id="gardeError">should be number</span></td></tr>
+            
+			<tr><td><input type="button"  value="Add" style="box-shadow: 1px 1px 1px;"/></td></tr>
+            <tr><td>Search<input type="text" name="searchTxt"  /></td><td><span id="gardeError">should be number</span></td></tr>
+           
+            <tr>
+                <td colspan="2">
+                    Filter:
+                    <select>
+                        <option value="all">All</option>
+                        <option value="success">Success</option>
+                        <option value="fail">Fail</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        </form>
+        <table style="border-color:lightcyan;">
+
+        
+        </table>    
+            
+<script src="students.js"></script>
+<button type="button" style="width: auto";><img src="images/basket.png" alt="basket" width="25px" style="position:relative ;"></button>
+</body>
+</html>
