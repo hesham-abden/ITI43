@@ -86,7 +86,7 @@ window.addEventListener("load",function(){
       case "success":
       for(i=0;i<document.querySelectorAll("tr [name=username]").length;i++)
       {
-        if(document.querySelectorAll("tr [name=grade]")[i].innerText<25)
+        if(document.querySelectorAll("tr [name=grade]")[i].innerText<60)
         {
           document.querySelectorAll("tr [name=grade]")[i].parentElement.classList.add("hidden")
         }
@@ -99,7 +99,7 @@ window.addEventListener("load",function(){
         
         for(i=0;i<document.querySelectorAll("tr [name=username]").length;i++)
         {
-          if(document.querySelectorAll("tr [name=grade]")[i].innerText>=25)
+          if(document.querySelectorAll("tr [name=grade]")[i].innerText>=60)
           {
             document.querySelectorAll("tr [name=grade]")[i].parentElement.classList.add("hidden")
           }
