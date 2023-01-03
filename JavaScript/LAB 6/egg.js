@@ -3,11 +3,15 @@
 
 window.addEventListener("load",function(){
     this.alert("Press Enter to start the game")
+    score=0;
+    let eggSpeed=10;
+    
 egg=this.document.querySelector("img");
 basket=document.querySelectorAll("img")[1];
 let basketPosition=window.basket.offsetLeft;
 egg.style.left=Math.floor(((Math.random()*500)+1))+"px";
 eggDrop=function(basketPosition){
+    
  let count=0;
  intervalID=setInterval(()=>{
     count++;
@@ -17,12 +21,17 @@ eggDrop=function(basketPosition){
         if(egg.offsetLeft<=this.basketPosition+40&&egg.offsetLeft>this.basketPosition-40)
         {
             egg.classList.add("hidden");
-            alert("Sucessful Attempt");
+            score++;
+            eggSpeed-=1;
+            
         }
         else{
             egg.src="images/Uovo_sorridente.png";
-            alert("Failed Attempt");
+            score--;
+
+            
         }
+        this.document.querySelector("h2").innerText=`Score=${score}`;
         clearInterval(intervalID);
         
     }
@@ -34,20 +43,26 @@ eggDrop=function(basketPosition){
  {
     
  }
- },10);
+ },eggSpeed);
  
-    }
+  return(egg)  }
     const basketMovement=function(key){
         // console.log(basket);
         let basketPosition1=window.basket.offsetLeft
         if(key.key=="ArrowLeft"&&basketPosition1>10)
         {
-            basket.style.left=(basketPosition1-5)+"px";  
+            basket.style.left=(basketPosition1-10)+"px";  
         }
-        if(key.key=="ArrowRight"&&basketPosition1<400)
-        {basket.style.left=(basketPosition1+5)+"px";}
+        if(key.key=="ArrowRight"&&basketPosition1<500)
+        {basket.style.left=(basketPosition1+10)+"px";}
         if(key.key=="Enter")
-        {eggDrop(basketPosition);}
+        {   
+        //    egg.style.left=Math.floor(((Math.random()*500)+1))+"px";
+          let tempegg=eggDrop(basketPosition);
+            tempegg.classList.remove("hidden");
+            tempegg.src="images/newegg.png";
+            egg.style.left=Math.floor(((Math.random()*500)+1))+"px";
+        }
 
         window.basketPosition=basketPosition1;
         }

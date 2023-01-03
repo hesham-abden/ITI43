@@ -10,7 +10,7 @@ window.addEventListener("load",function(){
     let gradeError=document.querySelectorAll("span")[1];
     filterList=this.document.querySelectorAll("select")[0];
     let cleanStr=new Array;
-    let cleanGrade=new Array;
+    let  cleanGrade=new Array;
     
 
     //events
@@ -20,7 +20,7 @@ window.addEventListener("load",function(){
           //name validation
           // cleanStr=document.querySelectorAll("table")[1].innerText.split("\tDELETE\n")
           // cleanStr[cleanStr.length-1]=cleanStr[cleanStr.length-1].replace("\tDELETE","") //cleaning the string
-       if(nameTextBox.value!=""&&!(cleanStr.includes(PascalCase(nameTextBox.value)))&&(gradeTextBox.value!="")&&(gradeTextBox.value<=60)&&(gradeTextBox.value>=0)&&(!isNaN(gradeTextBox.value))){
+       if(nameTextBox.value!=""&&!(cleanStr.includes(PascalCase(nameTextBox.value)))&&(gradeTextBox.value!="")&&(gradeTextBox.value<=100)&&(gradeTextBox.value>=0)&&(!isNaN(gradeTextBox.value))){
         
         let departmentValue=document.querySelector("input[name=Department]:checked").value;
         //1- created tr
@@ -31,19 +31,24 @@ window.addEventListener("load",function(){
         let tdElm=document.createElement("td");
          //<td></td>
          tdElm.setAttribute("name","username");
-        tdElm.innerText=PascalCase(nameTextBox.value);  //<td>......</td>
+        tdElm.innerText=PascalCase(nameTextBox.value);//<td>......</td>
+        cleanStr.push(tdElm.innerText);
         //3- td-> tr
         trElm.append(tdElm);
          tdElm=document.createElement("td");
          tdElm.setAttribute("name","grade");
-        tdElm.innerText=gradeTextBox.value;     // adding grade
+        tdElm.innerText=gradeTextBox.value; 
+        cleanGrade.push(tdElm.innerText);    // adding grade
          trElm.append(tdElm);
         //-- delete
         let deleteButton=document.createElement("button");
         deleteButton.innerText="DELETE";
         deleteButton.onclick=function(){
-                
-           this.parentElement.parentElement.remove();
+          let tempIndex=cleanStr.indexOf(this.parentElement.parentElement.childNodes[0].innerText);
+         cleanStr.splice(tempIndex,1);
+         cleanGrade.splice(tempIndex,1);
+        this.parentElement.parentElement.remove();
+           
         }
 
 
@@ -68,9 +73,9 @@ window.addEventListener("load",function(){
       gradeError.style.display="Block";  // grade entry error
 
        }
-       for(i=0;i<document.querySelectorAll("tr [name=username]").length;i++){
-        cleanStr[i]=document.querySelectorAll("tr [name=username]")[i].innerText;
-        cleanGrade[i]=document.querySelectorAll("tr [name=grade]")[i].innerText;}
+      //  for(i=0;i<document.querySelectorAll("tr [name=username]").length;i++){
+      //   cleanStr[i]=document.querySelectorAll("tr [name=username]")[i].innerText;
+      //   cleanGrade[i]=document.querySelectorAll("tr [name=grade]")[i].innerText;}
 
 
     }
