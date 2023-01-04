@@ -3,9 +3,8 @@
 
 window.addEventListener("load",function(){
     this.alert("Press Enter to start the game")
-    score=0;
     let eggSpeed=10;
-    
+    let score=0;
 egg=this.document.querySelector("img");
 basket=document.querySelectorAll("img")[1];
 let basketPosition=window.basket.offsetLeft;
@@ -13,6 +12,8 @@ egg.style.left=Math.floor(((Math.random()*500)+1))+"px";
 eggDrop=function(basketPosition){
     
  let count=0;
+ 
+
  intervalID=setInterval(()=>{
     count++;
     // console.log(this.basket.offsetTop)

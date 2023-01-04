@@ -16,7 +16,7 @@ window.addEventListener("load",function(){
     //events
     addButton.onclick=function(){
         nameError.style.display="none";
-        gradeError.style.display="none";
+        gradeError.style.display="none";  
           //name validation
           // cleanStr=document.querySelectorAll("table")[1].innerText.split("\tDELETE\n")
           // cleanStr[cleanStr.length-1]=cleanStr[cleanStr.length-1].replace("\tDELETE","") //cleaning the string
