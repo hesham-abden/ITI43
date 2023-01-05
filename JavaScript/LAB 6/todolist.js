@@ -17,9 +17,13 @@ if(taskBox.value!="")
     let temptr=document.createElement("tr");
     let count=document.querySelectorAll("table")[1].childElementCount;
     if(count%2==0)
-    {temptr.style.backgroundColor="aliceblue"}
+    {
+        temptr.style.backgroundColor="aliceblue"
+    }
     else
-    {temptr.style.backgroundColor="#CBEDD5"}
+    {
+        temptr.style.backgroundColor="#CBEDD5"
+    }
     taskTable.append(temptr);
     let temptd=document.createElement("td");        //checkbox
     let checkBox=document.createElement("input");
