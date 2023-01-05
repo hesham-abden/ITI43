@@ -8,7 +8,7 @@ window.addEventListener("load",function(){
     let gradeTextBox=document.querySelector("input[name=studentGrade]")
     let nameError=document.querySelector("span");
     let gradeError=document.querySelectorAll("span")[1];
-    filterList=this.document.querySelectorAll("select")[0];
+    let filterList=this.document.querySelectorAll("select")[0];
     let cleanStr=new Array;
     let  cleanGrade=new Array;
     
