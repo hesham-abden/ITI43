@@ -1,0 +1,9 @@
+div{
+width: 20px;
+height: 20px;
+background-color:black;
+position:absolute;
+margin: 2px;
+display: inline-block;
+
+}
