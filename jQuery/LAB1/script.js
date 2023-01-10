@@ -14,11 +14,11 @@ deleteBtn.addClass("delete");
 deleteBtn.appendTo(temprow);
 
 doneBtn.click(function(){
-    if($(this).parent().hasClass("TaskDone"))
-    {$(this).parent().removeClass("TaskDone");}
-    else{$(this).parent().addClass("TaskDone")}
+    $(this).parent().toggleClass("TaskDone")
 });
 deleteBtn.click(function(){
     $(this).parent().remove();
 })
+
+
 });
