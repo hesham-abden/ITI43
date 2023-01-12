@@ -1,4 +1,5 @@
 $("#btnAdd").click(()=>{
+    if($("#taskInput").val()!=""){
 temprow=$("<div></div>");
 temprow.appendTo(".tasksBox");
 
@@ -20,5 +21,5 @@ deleteBtn.click(function(){
     $(this).parent().remove();
 })
 
-
+    }
 });
