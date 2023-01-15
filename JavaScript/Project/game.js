@@ -97,7 +97,7 @@ let bombInterval=setInterval(() => {
     
 let timeInterval=setInterval(() => {
     time--;
-    if(time==40)
+    if(time==0)
         {
             gameMode=false;
         }
@@ -153,4 +153,3 @@ allBirdImages.forEach(element => {
 })
 }
 
-.033
