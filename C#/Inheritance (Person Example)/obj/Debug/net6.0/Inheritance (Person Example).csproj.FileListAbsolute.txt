@@ -1,0 +1,15 @@
+C:\Users\Dell\source\repos\Inheritance (Person Example)\bin\Debug\net6.0\Inheritance (Person Example).exe
+C:\Users\Dell\source\repos\Inheritance (Person Example)\bin\Debug\net6.0\Inheritance (Person Example).deps.json
+C:\Users\Dell\source\repos\Inheritance (Person Example)\bin\Debug\net6.0\Inheritance (Person Example).runtimeconfig.json
+C:\Users\Dell\source\repos\Inheritance (Person Example)\bin\Debug\net6.0\Inheritance (Person Example).dll
+C:\Users\Dell\source\repos\Inheritance (Person Example)\bin\Debug\net6.0\Inheritance (Person Example).pdb
+C:\Users\Dell\source\repos\Inheritance (Person Example)\obj\Debug\net6.0\Inheritance (Person Example).csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\Inheritance (Person Example)\obj\Debug\net6.0\Inheritance (Person Example).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\source\repos\Inheritance (Person Example)\obj\Debug\net6.0\Inheritance (Person Example).AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\Inheritance (Person Example)\obj\Debug\net6.0\Inheritance (Person Example).AssemblyInfo.cs
+C:\Users\Dell\source\repos\Inheritance (Person Example)\obj\Debug\net6.0\Inheritance (Person Example).csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Inheritance (Person Example)\obj\Debug\net6.0\Inheritance (Person Example).dll
+C:\Users\Dell\source\repos\Inheritance (Person Example)\obj\Debug\net6.0\refint\Inheritance (Person Example).dll
+C:\Users\Dell\source\repos\Inheritance (Person Example)\obj\Debug\net6.0\Inheritance (Person Example).pdb
+C:\Users\Dell\source\repos\Inheritance (Person Example)\obj\Debug\net6.0\Inheritance (Person Example).genruntimeconfig.cache
+C:\Users\Dell\source\repos\Inheritance (Person Example)\obj\Debug\net6.0\ref\Inheritance (Person Example).dll
