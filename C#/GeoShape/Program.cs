@@ -36,11 +36,13 @@ class ABS
     }
 
     public static void Main()
+    
     {
-        Rectangle temp1 = new Rectangle(1, 2);
-        Rectangle temp2 = new Rectangle(3, 4);
-        Rectangle temp3 = new Rectangle(5, 6);
-       Console.WriteLine(Rectangle.GetArea(temp1, temp2, temp3));
+        // Rectangle temp1 = new Rectangle(1, 2);
+        // Rectangle temp2 = new Rectangle(3, 4);
+        // Rectangle temp3 = new Rectangle(5, 6);
+        //Console.WriteLine(Rectangle.GetArea(temp1, temp2, temp3));
+        String.Compare("A", "B");
 
 
     }

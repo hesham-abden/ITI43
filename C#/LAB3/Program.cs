@@ -34,6 +34,7 @@ class LAB3
             Console.WriteLine("Grade Average for Student({0}) = {1}", i + 1, (TempSumAvg / Student[i].Length));
         }
 
+
     }
 
 

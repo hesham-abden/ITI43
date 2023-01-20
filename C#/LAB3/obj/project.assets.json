@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\LAB3\\LAB3.csproj",
+      "projectUniqueName": "C:\\Users\\Dell\\Desktop\\OldFiles\\gitclone\\iti43\\C#\\LAB3\\LAB3.csproj",
       "projectName": "LAB3",
-      "projectPath": "C:\\Users\\Dell\\source\\repos\\LAB3\\LAB3.csproj",
+      "projectPath": "C:\\Users\\Dell\\Desktop\\OldFiles\\gitclone\\iti43\\C#\\LAB3\\LAB3.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dell\\source\\repos\\LAB3\\obj\\",
+      "outputPath": "C:\\Users\\Dell\\Desktop\\OldFiles\\gitclone\\iti43\\C#\\LAB3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",

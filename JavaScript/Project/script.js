@@ -9,11 +9,4 @@ gobutton.addEventListener("click",function(){
         window.location.href=`game.html?${inputName.value}`  //send data to the game html through url querying
     }   
 })
-
-
-
-
-
-
-
 })

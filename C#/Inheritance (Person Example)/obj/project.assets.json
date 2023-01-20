@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\Inheritance (Person Example)\\Inheritance (Person Example).csproj",
+      "projectUniqueName": "C:\\Users\\Dell\\Desktop\\OldFiles\\gitclone\\iti43\\C#\\Inheritance (Person Example)\\Inheritance (Person Example).csproj",
       "projectName": "Inheritance (Person Example)",
-      "projectPath": "C:\\Users\\Dell\\source\\repos\\Inheritance (Person Example)\\Inheritance (Person Example).csproj",
+      "projectPath": "C:\\Users\\Dell\\Desktop\\OldFiles\\gitclone\\iti43\\C#\\Inheritance (Person Example)\\Inheritance (Person Example).csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dell\\source\\repos\\Inheritance (Person Example)\\obj\\",
+      "outputPath": "C:\\Users\\Dell\\Desktop\\OldFiles\\gitclone\\iti43\\C#\\Inheritance (Person Example)\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",

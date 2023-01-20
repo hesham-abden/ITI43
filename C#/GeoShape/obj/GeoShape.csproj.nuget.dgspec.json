@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\source\\repos\\GeoShape\\GeoShape.csproj": {}
+    "C:\\Users\\Dell\\Desktop\\OldFiles\\gitclone\\iti43\\C#\\GeoShape\\GeoShape.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\source\\repos\\GeoShape\\GeoShape.csproj": {
+    "C:\\Users\\Dell\\Desktop\\OldFiles\\gitclone\\iti43\\C#\\GeoShape\\GeoShape.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\GeoShape\\GeoShape.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\Desktop\\OldFiles\\gitclone\\iti43\\C#\\GeoShape\\GeoShape.csproj",
         "projectName": "GeoShape",
-        "projectPath": "C:\\Users\\Dell\\source\\repos\\GeoShape\\GeoShape.csproj",
+        "projectPath": "C:\\Users\\Dell\\Desktop\\OldFiles\\gitclone\\iti43\\C#\\GeoShape\\GeoShape.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\source\\repos\\GeoShape\\obj\\",
+        "outputPath": "C:\\Users\\Dell\\Desktop\\OldFiles\\gitclone\\iti43\\C#\\GeoShape\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",

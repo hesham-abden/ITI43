@@ -41,13 +41,14 @@ const GameOn=function(){
     if(gameMode==false)
 {    
     clearInterval(bombInterval);
-    bombInterval=0;
+    bombInterval=null;
     clearInterval(birdInterval);
-    birdInterval=0;
+    birdInterval=null;
     clearInterval(intervalId);
-    intervalId=0
+    intervalId=null;
     clearInterval(timeInterval);
-    timeInterval=0;
+    timeInterval=null;
+
     let date=Date().split("G");
     localStorage.setItem(`${username}`,`Score : ${score}\nDate : ${date[0]}`);
     submitBox.removeEventListener("click",GameOn);
@@ -55,7 +56,7 @@ const GameOn=function(){
     document.querySelectorAll("img").forEach((element)=>element.remove())
     birdCount=0;
     score=0;
-    birdKilledBar.innerText=`Bird Killed : ${birdCount}`      //counter for killing birds
+    birdKilledBar.innerText=`Dragon Killed : ${birdCount}`      //counter for killing birds
     scoreBar.innerText=`Score : ${score}`
     time=60;
     timeBar.innerText=`Time Limit : ${time}`;
@@ -76,10 +77,22 @@ let bombInterval=setInterval(() => {
     let top=0;
     document.body.append(bombObj);
     bombObj.addEventListener("click",function(){
-        bombAll(),clearInterval(bombMovementInterval);});
+        let allBirdImages=document.querySelectorAll("img");
+        allBirdImages.forEach(element => {
+            //range of the bomb=(+200,-200);
+        if((bombObj.offsetLeft>element.offsetLeft-200)&&(element.offsetLeft+200>bombObj.offsetLeft)&&(bombObj.offsetTop>element.offsetTop-200)&&(element.offsetTop+200>bombObj.offsetTop))
+            {
+                birdHit(element); 
+                
+            }
+            
+        })
+        
+        clearInterval(bombMovementInterval);
+    });
     
         let bombMovementInterval=setInterval(() => {
-            top+=1;                           //movement speed
+            top+=1;                           // bomb movement speed
         bombObj.style.top=top+"px";
         if(bombObj.offsetTop==500)
         {
@@ -90,11 +103,11 @@ let bombInterval=setInterval(() => {
         {
             clearInterval(bombMovementInterval);
         }
-        console.log("A");
+        
         
     }, 10);
 },7*birdTime);
-    
+    // for the time counter (seconds timer);
 let timeInterval=setInterval(() => {
     time--;
     if(time==0)
@@ -118,7 +131,7 @@ const birdHit=function(birdImage)
             score-=10;
             break;    
     }
-    // console.log(birdImage1);
+    
     birdKilledBar.innerText=`Bird Killed : ${++birdCount}`      //counter for killing birds
     scoreBar.innerText=`Score : ${score}` //updating score board
     birdImage.src="./images/explode.gif";        //changing gif for the explosion
@@ -134,7 +147,7 @@ const birdMovement=function(birdImage)
 {
     let left=0;
     let birdInterval=setInterval(() => {
-        left+=20;                           //movement speed
+        left+=20;                           // bird movement speed
     birdImage.style.left=left+"px";
     if(birdImage.offsetLeft>="1200")             //removing img after reaching the max width.
     {
@@ -145,11 +158,3 @@ const birdMovement=function(birdImage)
 
 return birdInterval;
 }
-function bombAll()
-{
-let allBirdImages=document.querySelectorAll("img");
-allBirdImages.forEach(element => {
-    birdHit(element);
-})
-}
-
