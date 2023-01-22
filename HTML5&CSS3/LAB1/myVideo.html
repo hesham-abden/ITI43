@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task1</title>
+    <link rel="stylesheet" href="./myVideo.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <video src="frozen.mp4" poster="frozen.jpg"></video>
+    <div>
+      <input
+        type="range"
+        name="bar"
+        id="timebar"
+        value="0"
+        min="0"
+        max="100"
+        step="0.5"
+      /><span>00:00/00:00</span><br />
+      <button id="Play">Play</button>
+      <button id="Stop">Stop</button>
+      <button id="Beginning"><<</button>
+      <button id="Backward"><</button>
+      <button id="Forward">></button>
+      <button id="End">>></button>
+      <input
+        type="range"
+        name="audio"
+        id="audiobar"
+        value="1"
+        min="0"
+        max="1"
+        step="0.1"
+      />
+      <button id="Mute">Mute</button> <br />
+      Speed
+      <input
+        type="range"
+        name="Speed"
+        id="speedbar"
+        value="1"
+        min="1"
+        max="16"
+        step="2"
+      />
+    </div>
+  </body>
+  <script src="./myVideo.js"></script>
+</html>

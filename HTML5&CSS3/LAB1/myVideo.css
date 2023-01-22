@@ -1,0 +1,32 @@
+video {
+  object-fit: cover;
+  width: 500px;
+  left: 30%;
+  margin-top: 20px;
+  position: relative;
+}
+body {
+  font-family: "Papyrus";
+  font-size: 15px;
+  font-weight: 700;
+}
+
+div {
+  left: 30%;
+  width: 500px;
+  position: relative;
+}
+#timebar {
+  width: 360px;
+}
+span {
+  width: 100px;
+  height: 50px;
+  margin-left: 20px;
+}
+button {
+  margin: 6px;
+  font-family: "Papyrus";
+  font-size: 13px;
+  font-weight: 700;
+}
