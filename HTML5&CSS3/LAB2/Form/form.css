@@ -1,0 +1,23 @@
+body
+{
+    background-color:antiquewhite;
+}
+div
+{
+    position: relative;
+    left: 40%;
+    top: 10%;
+    width: 300px;
+    height: fit-content;
+    background-color: wheat;
+    border:  solid burlywood 5px;
+    border-radius: 30%;
+    font-family: "Papyrus";
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+p
+{
+    margin: 0;
+}
