@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Change Email Address</h1>
+    <p>Email :</p>
+    <input
+      type="email"
+      name="name"
+      id="firstname"
+      class="content"
+      required
+      autocomplete="off"
+    />
+    <p class="required">The required email must have @</p>
+    <p>Password :</p>
+    <input
+      type="password"
+      name="name"
+      id="lastname"
+      class="content"
+      required
+      autocomplete="off"
+    />
+    <p class="required">The required password must have special character</p>
+    
+    <button >Change</button>
+  </body>
+  <style>
+    .content {
+      outline: 0;
+      border: solid 1px red;
+    }
+    .content:valid {
+        border: solid 1px green;
+    }
+    .content:valid ~ .required {
+      display: none;
+      
+    }
+   button
+   {
+    display: block;
+    margin: 10px;
+   }
+   
+  </style>
+</html>
