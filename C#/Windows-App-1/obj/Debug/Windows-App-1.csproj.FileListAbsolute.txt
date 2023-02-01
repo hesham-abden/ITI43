@@ -1,0 +1,11 @@
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\bin\Debug\Windows-App-1.exe.config
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\bin\Debug\Windows-App-1.exe
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\bin\Debug\Windows-App-1.pdb
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\obj\Debug\Windows-App-1.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\obj\Debug\Windows-App-1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\obj\Debug\Windows_App_1.Properties.Resources.resources
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\obj\Debug\Windows-App-1.csproj.GenerateResource.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\obj\Debug\Windows-App-1.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\obj\Debug\Windows-App-1.exe
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\obj\Debug\Windows-App-1.pdb
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\obj\Debug\Windows_App_1.Form1.resources
