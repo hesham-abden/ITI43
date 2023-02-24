@@ -1,0 +1,121 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Project
+{
+    public partial class Form1 : Form
+    {
+        Graphics g;
+        Brush Brush;
+        Brush player1;
+        Brush player2;
+        int Board_length;
+        int Board_Width;
+        int Board_rows;
+        int Board_columns;
+        int Circle_Size;
+        int[,] Board;
+        int row_num;
+        int col_num;
+        Point[,] points;
+        int turn = 1;
+        public Form1()
+        {
+            InitializeComponent();
+            g = panel1.CreateGraphics();
+            player1 = new SolidBrush(Color.Red);
+            player2 = new SolidBrush(Color.Blue);
+            Board_Width = panel1.Width = 400;
+            Board_length = panel1.Height = 400;
+            Circle_Size = 50;
+            panel1.BackColor = Color.Beige;
+            Board_rows = Board_length / Circle_Size;
+            Board_columns = Board_length / Circle_Size;
+            Board = new int[Board_rows, Board_columns];
+            points = new Point[Board_rows, Board_columns];
+            row_num = 3;
+            col_num = Board_columns;
+            
+            
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Brush = new SolidBrush(Color.White);
+            g = panel1.CreateGraphics();
+            
+            for (int i = 0,x = 0 ; i < Board_Width; i += Circle_Size,x++)
+            {   
+                for (int j = 0,y = 0; j < Board_length; j+=Circle_Size,y++)
+                {
+                   
+                    g.FillEllipse(Brush, j, i, Circle_Size, Circle_Size);
+                    points[x,y] = new Point(j, i);
+                }
+                
+            }
+
+        }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            row_num = Board_rows-1;
+            col_num = (e.X / Circle_Size);
+            if (e.Y<Board_length&&e.X<Board_Width)
+            {
+                
+                
+                while (row_num >= 0&&Board[row_num, col_num] >0)
+                {
+                    row_num--;
+                }
+
+                if (row_num >= 0&&Board[row_num, col_num] == 0)
+                {
+                    if (turn == 1)
+                    {
+                        g.FillEllipse(player1, points[row_num, col_num].X, points[row_num, col_num].Y, Circle_Size, Circle_Size);
+                        Board[row_num, col_num] = 1;
+                        turn = 2;
+                    }
+                    else if(turn == 2)
+                    {
+                        g.FillEllipse(player2, points[row_num, col_num].X, points[row_num, col_num].Y, Circle_Size, Circle_Size);
+                        Board[row_num, col_num] = 2;
+                        turn = 1;   
+                    }
+
+                }
+            }
+            
+        }
+
+        private void panel1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+            for (int i = 0; i < Board_columns; i++)
+            {
+
+
+                for (int j = 0; j < Board_rows; j++)
+                {
+                    richTextBox1.AppendText(Board[i, j].ToString() + "\t");
+
+                }
+                richTextBox1.AppendText("\n");
+            }
+        }
+    }
+}

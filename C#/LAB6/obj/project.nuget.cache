@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "7ygk+D2tcSHF/UhF5ZoyVxhE7m9/tVd0fNoHvC0CvgGpY8H1QRIJCYw6CbAJp4qIkvT6Vsy7ezrsxWAgkzrAsw==",
+  "dgSpecHash": "88NCT0v+8VQmTW/Mo5SyxnHPbUqV2ni740+BKo9vJxvWwlU6h4dFTLZsWtM1Valo4QML3UXSmc2cLdr39h00yQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dell\\source\\repos\\LAB6\\LAB6.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Dell\\Desktop\\OldFiles\\gitclone\\iti43\\C#\\LAB6\\LAB6.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.14\\microsoft.netcore.app.host.win-x64.6.0.14.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.14\\microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.14\\microsoft.windowsdesktop.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.14\\microsoft.netcore.app.ref.6.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

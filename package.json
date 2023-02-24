@@ -1,0 +1,25 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "testin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hesham-abden/iti43.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "hesham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hesham-abden/iti43/issues"
+  },
+  "homepage": "https://github.com/hesham-abden/iti43#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.0-alpha1"
+  }
+}

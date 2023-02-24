@@ -17,8 +17,11 @@ namespace Windows_App_1
 {
     public partial class Form1 : Form
     {
+        Graphics g;
         //Company_Name
         string CName;
+        string CFontName;
+        int CSize;
         Font CFont;
         Brush CBrush;
         Color CColor;
@@ -46,8 +49,8 @@ namespace Windows_App_1
         Pen RPen;
         Rectangle Rec;
         //TableContent
-        List<string> T_Year = new List<string> { "Year", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997" };
-        List<string> T_Revenue = new List<string> { "Revenue", "150", "170", "180", "175", "200", "250", "210", "240", "280", "140" };
+        List<string> T_Year = new List<string> { "Year", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997","1998","1999","2000" };
+        List<string> T_Revenue = new List<string> { "Revenue", "150", "170", "180", "175", "200", "250", "210", "240", "280", "140","170","200","210" };
         string Table_Content;
         Font TCFont;
         Brush TCBrush;
@@ -77,6 +80,7 @@ namespace Windows_App_1
         Brush BarBrush;
         Pen BarPen;
         HatchStyle BarStyle;
+        DialogBox dlg_box = new DialogBox();
 
 
 
@@ -90,14 +94,16 @@ namespace Windows_App_1
         public Form1()
         {
             InitializeComponent();
-            
+
             WindowState = FormWindowState.Maximized;
-            Graphics z = this.CreateGraphics();
+            g = this.CreateGraphics();
             CName = "ABC Company";
-            CColor = Color.Black;
-            CFont = new Font("Times New Roman", 20);
+            CSize = 20;
+            CColor = Color.Red;
+            CFontName = "Times New Roman";
+            CFont = new Font(CFontName, CSize);
             CBrush = new SolidBrush(CColor);
-            SizeF Csize = z.MeasureString(CName, CFont);
+            SizeF Csize = g.MeasureString(CName, CFont);
             CPoint = new PointF((this.Width) / 2 - (Csize.Width) / 2, 50);
             //////////////////////////////////////////////////////
             CLColor = Color.Black;
@@ -111,7 +117,7 @@ namespace Windows_App_1
             TColor = Color.Black;
             TFont = new Font("Times New Roman", 20);
             TBrush = new SolidBrush(TColor);
-            SizeF titleSize = z.MeasureString(TName, TFont);
+            SizeF titleSize = g.MeasureString(TName, TFont);
             TPoint = new PointF((this.Width) / 2 - (titleSize.Width) / 2, Csize.Height+80);
             /////////////////////////////////////
             TLColor = Color.Black;
@@ -127,20 +133,21 @@ namespace Windows_App_1
             ////////// Table Content
             Graphics a = this.CreateGraphics();
             TCColor = Color.Black;
-            TCFont = new Font("Times New Roman", 20);
+            TCFont = new Font("Times New Roman", 250 / (2*T_Revenue.Count()) );
             TCBrush = new SolidBrush(TCColor);
             //////// Plot
             XAxis = 1987;
             YAxis = 100;
-            PlotLength = 400;
-            Step = PlotLength/11;
+            Step = 25;
+            
+            
             YScale = 20;
             XScale = 1;
             PColor = Color.Black;
             PPen = new Pen(PColor, 2);
             PDashStyle = DashStyle.Solid;
             PPen.DashStyle = PDashStyle;
-            PFont = new Font("Times New Roman", 10);
+            PFont = new Font("Times New Roman", T_Revenue.Count()/2);
             PBrush= new SolidBrush(PColor);
             //LineChart
             LineColor = Color.Blue;
@@ -148,9 +155,11 @@ namespace Windows_App_1
             //BarChart
             BarColor = Color.Red;
             BarStyle = HatchStyle.BackwardDiagonal;
+            /// AddButton and labels
+            label3.Text = (int.Parse(T_Year.Last())+1).ToString();
             
-            
-            
+
+
 
 
 
@@ -161,6 +170,7 @@ namespace Windows_App_1
         }
         protected override void OnPaint(PaintEventArgs e)
         {
+           
             DisplayCompanyName();
             DrawLine();
             DisplayTitle();
@@ -170,23 +180,29 @@ namespace Windows_App_1
             DisplayLineChart();
             DisplayChecker();
             
+            //dlg_box.Times = dlg_box.Arial = dlg_box.Courier = false;
+           
             
+
+
 
         }
         public void DisplayCompanyName()
-        {
-            Graphics g = this.CreateGraphics();
+        {   
+            CFont =new Font (CFontName, CSize);
+            CBrush = new SolidBrush(CColor);
             g.DrawString(CName, CFont, CBrush,CPoint);
+            
         }
         public void DrawLine()
         {
-            Graphics g=this.CreateGraphics();
+            
             g.DrawLine(CLPen, CLStartPoint, CLEndPoint);
             g.DrawLine(TLPen, TLStartPoint, TLEndPoint);
         }
         public void DisplayTitle()
         {
-            Graphics g = this.CreateGraphics();
+            
             g.DrawString(TName, TFont, TBrush, TPoint);
             
             
@@ -194,14 +210,14 @@ namespace Windows_App_1
         }
         public void DisplayTable()
         {
-            Graphics g = this.CreateGraphics();
+            
             
             int TableY = 100;
-            int width = 50;
+            int width = 550/ T_Revenue.Count();
             int height = 120;
             SizeF TCsize;
             
-            for (int i=0;i<11;i++)
+            for (int i=0;i< T_Revenue.Count(); i++)
             {
                 int TableX = 1100;
                 for (int j = 0; j < 2; j++)
@@ -220,7 +236,7 @@ namespace Windows_App_1
                     g.DrawString(Table_Content, TCFont, TCBrush, TableX+55 - (TCsize.Width)/2, TableY+10);
                     TableX += height; 
                 }
-                TableY+=50;
+                TableY+=width;
                 
             }
 
@@ -230,8 +246,8 @@ namespace Windows_App_1
         }
         public void DisplayPlot()
         {
-            Graphics g = this.CreateGraphics();
-            
+
+            PlotLength = Step * T_Revenue.Count();
             PStartPoint = new PointF(PlotX, PlotY);
             PEndPointX = new PointF(PlotX + PlotLength, PlotY);
             PEndPointY = new PointF(PlotX, PlotY - PlotLength);
@@ -247,7 +263,7 @@ namespace Windows_App_1
 
 
 
-            for (int i = 1; i < 11; i++)
+            for (int i = 1; i < T_Revenue.Count(); i++)
             {
                 PointF IndicatorStart = new PointF(PlotX + Step * i, PlotY);
                 PointF IndicatorEnd = new PointF(PlotX + Step * i, PlotY + 5);
@@ -263,34 +279,37 @@ namespace Windows_App_1
             
         }
         public void DisplayLineChart() {
-            Graphics g = this.CreateGraphics();
-            for (int i = 1; i < 10; i++)
+            
+            for (int i = 1; i < T_Revenue.Count()-1; i++)
             {
 
                 Point PStart = new Point(PlotX + (int.Parse(T_Year[i]) - XAxis) * Step/XScale, PlotY - (int.Parse(T_Revenue[i]) - YAxis) * (Step)/YScale);
                 Point PEnd = new Point(PlotX + (int.Parse(T_Year[i + 1]) - XAxis) * Step/XScale, PlotY - (int.Parse(T_Revenue[i + 1]) - YAxis) * (Step)/YScale);
                 g.DrawLine(LinePen, PStart, PEnd);
-                //MessageBox.Show((PlotX + (int.Parse(T_Year[i]) - XAxis) * Step / XScale).ToString());
+                
+                
             }
+           
         }
         public void DisplayBarChart()
         {
-            Graphics g = this.CreateGraphics();
+            
             BarBrush = new HatchBrush(BarStyle, BarColor);
             BarPen = new Pen(BarBrush, 1);
-            for (int i = 1; i < 11; i++)
+            for (int i = 1; i < T_Revenue.Count(); i++)
             {
                 Point PStarta = new Point(PlotX + (int.Parse(T_Year[i]) - XAxis) * Step / XScale, PlotY - (int.Parse(T_Revenue[i]) - YAxis) * (Step)/YScale);
                 Rectangle BarChart = new Rectangle(PStarta.X, PStarta.Y, 20, PlotY - PStarta.Y);
                 g.DrawRectangle(BarPen, BarChart);
                 g.FillRectangle(BarBrush, BarChart);
             }
-            
 
+            
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            
             Keys K_Control = e.Modifiers;
             if (K_Control == Keys.Control)
             {
@@ -315,7 +334,9 @@ namespace Windows_App_1
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-            if(PlotX+PlotLength>e.X&&PlotX<e.X&&PlotY-PlotLength<e.Y&&PlotY>e.Y)
+            ActiveControl = null;   
+
+            if (PlotX+PlotLength>e.X&&PlotX<e.X&&PlotY-PlotLength<e.Y&&PlotY>e.Y)
             {
                 if (e.Button == MouseButtons.Left)
                 {
@@ -341,7 +362,7 @@ namespace Windows_App_1
 
             LineColor = Color.Red;
             LinePen.Color = LineColor;
-            Invalidate(new Rectangle(new Point(PlotX, PlotY), new Size(PlotLength, PlotLength)));
+            Invalidate();
 
         }
 
@@ -349,14 +370,14 @@ namespace Windows_App_1
         {
             LineColor = Color.Green;
             LinePen.Color = LineColor;
-            Invalidate(new Rectangle(new Point(PlotX, PlotY), new Size(PlotLength, PlotLength)));
+            Invalidate();
         }
 
         private void blueToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LineColor = Color.Blue;
             LinePen.Color = LineColor;
-            Invalidate(new Rectangle(new Point(PlotX, PlotY), new Size(PlotLength, PlotLength)));
+            Invalidate();
         }
 
         private void dashToolStripMenuItem_Click(object sender, EventArgs e)
@@ -420,7 +441,7 @@ namespace Windows_App_1
         }
 
         
-        public void Checker(params ToolStripMenuItem[] item)
+        public void Checked(params ToolStripMenuItem[] item)
         {
             foreach(ToolStripMenuItem x in item)
             
@@ -435,52 +456,53 @@ namespace Windows_App_1
                 x.CheckState = CheckState.Unchecked;
         }
         public void DisplayChecker()
+        
         {
             if (LineColor == Color.Red)
             {
-                Checker(redToolStripMenuItem, redToolStripMenuItem2, redToolStripMenuItem4);
+                Checked(redToolStripMenuItem, redToolStripMenuItem2, redToolStripMenuItem4);
                 UnChecked(greenToolStripMenuItem, greenToolStripMenuItem2, greenToolStripMenuItem4);
                 UnChecked(blueToolStripMenuItem, blueToolStripMenuItem2, blueToolStripMenuItem4);
             }
             else if(LineColor == Color.Green)
             {
                 UnChecked(redToolStripMenuItem, redToolStripMenuItem2, redToolStripMenuItem4);
-                Checker(greenToolStripMenuItem, greenToolStripMenuItem2, greenToolStripMenuItem4);
+                Checked(greenToolStripMenuItem, greenToolStripMenuItem2, greenToolStripMenuItem4);
                 UnChecked(blueToolStripMenuItem, blueToolStripMenuItem2, blueToolStripMenuItem4);
             }
             else if(LineColor == Color.Blue)
             {
                 UnChecked(redToolStripMenuItem, redToolStripMenuItem2, redToolStripMenuItem4);
                 UnChecked(greenToolStripMenuItem, greenToolStripMenuItem2, greenToolStripMenuItem4);
-                Checker(blueToolStripMenuItem, blueToolStripMenuItem2, blueToolStripMenuItem4);
+                Checked(blueToolStripMenuItem, blueToolStripMenuItem2, blueToolStripMenuItem4);
             }
             if (BarColor == Color.Red)
             {
-                Checker(redToolStripMenuItem1, redToolStripMenuItem3, redToolStripMenuItem5);
+                Checked(redToolStripMenuItem1, redToolStripMenuItem3, redToolStripMenuItem5);
                 UnChecked(greenToolStripMenuItem1, greenToolStripMenuItem3, greenToolStripMenuItem5);
                 UnChecked(blueToolStripMenuItem1, blueToolStripMenuItem3, blueToolStripMenuItem5);
             }
             else if (BarColor == Color.Green)
             {
                 UnChecked(redToolStripMenuItem1, redToolStripMenuItem3, redToolStripMenuItem5);
-                Checker(greenToolStripMenuItem1, greenToolStripMenuItem3, greenToolStripMenuItem5);
+                Checked(greenToolStripMenuItem1, greenToolStripMenuItem3, greenToolStripMenuItem5);
                 UnChecked(blueToolStripMenuItem1, blueToolStripMenuItem3, blueToolStripMenuItem5);
             }
             else if (BarColor == Color.Blue)
             {
                 UnChecked(redToolStripMenuItem1, redToolStripMenuItem3, redToolStripMenuItem5);
                 UnChecked(greenToolStripMenuItem1, greenToolStripMenuItem3, greenToolStripMenuItem5);
-                Checker(blueToolStripMenuItem1, blueToolStripMenuItem3, blueToolStripMenuItem5);
+                Checked(blueToolStripMenuItem1, blueToolStripMenuItem3, blueToolStripMenuItem5);
             }
             if (LineDashStyle == DashStyle.Solid)
             {
                 UnChecked(dashToolStripMenuItem, dashToolStripMenuItem2, dashToolStripMenuItem1);
-                Checker(solidToolStripMenuItem, solidToolStripMenuItem2, solidToolStripMenuItem1);
+                Checked(solidToolStripMenuItem, solidToolStripMenuItem2, solidToolStripMenuItem1);
                 UnChecked(dottedToolStripMenuItem, dottedToolStripMenuItem2, dottedToolStripMenuItem1);
             }
              else if (LineDashStyle == DashStyle.Dash)
                 {
-                Checker(dashToolStripMenuItem, dashToolStripMenuItem2, dashToolStripMenuItem1);
+                Checked(dashToolStripMenuItem, dashToolStripMenuItem2, dashToolStripMenuItem1);
                 UnChecked(solidToolStripMenuItem, solidToolStripMenuItem2, solidToolStripMenuItem1);
                 UnChecked(dottedToolStripMenuItem, dottedToolStripMenuItem2, dottedToolStripMenuItem1);
             }
@@ -488,33 +510,36 @@ namespace Windows_App_1
             {
                 UnChecked(dashToolStripMenuItem, dashToolStripMenuItem2, dashToolStripMenuItem1);
                 UnChecked(solidToolStripMenuItem, solidToolStripMenuItem2, solidToolStripMenuItem1);
-                Checker(dottedToolStripMenuItem, dottedToolStripMenuItem2, dottedToolStripMenuItem1);
+                Checked(dottedToolStripMenuItem, dottedToolStripMenuItem2, dottedToolStripMenuItem1);
             }
 
             if (BarStyle == HatchStyle.BackwardDiagonal)
             {
-                Checker(rightToolStripMenuItem, rightToolStripMenuItem2, rightToolStripMenuItem1);
+                Checked(rightToolStripMenuItem, rightToolStripMenuItem2, rightToolStripMenuItem1);
                 UnChecked(leftToolStripMenuItem, leftToolStripMenuItem2, leftToolStripMenuItem1);
                 UnChecked(crossToolStripMenuItem, crossToolStripMenuItem2, crossToolStripMenuItem1);
             }
             else if (BarStyle == HatchStyle.ForwardDiagonal)
             {
                 UnChecked(rightToolStripMenuItem, rightToolStripMenuItem2, rightToolStripMenuItem1);
-                Checker(leftToolStripMenuItem, leftToolStripMenuItem2, leftToolStripMenuItem1);
+                Checked(leftToolStripMenuItem, leftToolStripMenuItem2, leftToolStripMenuItem1);
                 UnChecked(crossToolStripMenuItem, crossToolStripMenuItem2, crossToolStripMenuItem1);
             }
             if (BarStyle == HatchStyle.Cross)
             {
                 UnChecked(rightToolStripMenuItem, rightToolStripMenuItem2, rightToolStripMenuItem1);
                 UnChecked(leftToolStripMenuItem, leftToolStripMenuItem2, leftToolStripMenuItem1);
-                Checker(crossToolStripMenuItem, crossToolStripMenuItem2, crossToolStripMenuItem1);
+                Checked(crossToolStripMenuItem, crossToolStripMenuItem2, crossToolStripMenuItem1);
             }
+
+            
 
 
         }
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
+            
             if (PlotX + PlotLength > e.X && PlotX < e.X && PlotY - PlotLength < e.Y && PlotY > e.Y)
             {
                 float x = (float)Step / YScale;
@@ -523,6 +548,56 @@ namespace Windows_App_1
                 toolStripStatusLabel1.Text ="Year :"+ X_Coord.ToString();
                 toolStripStatusLabel2.Text = "Renvenue : " + Y_Coord.ToString();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var RevNum = int.Parse(textBox1.Text);
+                if(RevNum > 120 && RevNum<350)
+                {
+                    T_Revenue.Add(RevNum.ToString());
+                    T_Year.Add((int.Parse(T_Year.Last()) + 1).ToString());
+                    label3.Text = (int.Parse(T_Year.Last()) + 1).ToString();
+                    g.Clear(this.BackColor);
+                    Invalidate();
+                }
+                else
+                {
+                    MessageBox.Show("Revenue between 120 and 350");
+                }
+
+            }
+            catch (FormatException)
+            {
+
+                MessageBox.Show("Must Be an Integer");
+            }
+            
+        }
+
+        private void companyNameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            dlg_box.TxtBox = CName;
+            dlg_box.str_Color = CColor;
+            dlg_box.fontname = CFontName;
+            dlg_box.fontsize = CSize;
+           
+            DialogResult =dlg_box.ShowDialog();
+           
+            if(DialogResult==DialogResult.OK)
+            {
+                CFontName = dlg_box.fontname;
+                CSize = dlg_box.fontsize;
+                MessageBox.Show(dlg_box.fontname);
+                CColor = dlg_box.str_Color;
+                CName = dlg_box.TxtBox;
+                Invalidate();
+            }
+            
+            
         }
 
         

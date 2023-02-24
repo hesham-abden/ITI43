@@ -9,3 +9,4 @@ C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\obj\Debug\Windows
 C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\obj\Debug\Windows-App-1.exe
 C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\obj\Debug\Windows-App-1.pdb
 C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\obj\Debug\Windows_App_1.Form1.resources
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Windows-App-1\obj\Debug\Windows_App_1.DialogBox.resources

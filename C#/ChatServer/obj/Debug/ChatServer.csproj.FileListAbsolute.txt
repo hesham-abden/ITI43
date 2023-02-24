@@ -1,0 +1,11 @@
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\ChatServer\bin\Debug\ChatServer.exe.config
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\ChatServer\bin\Debug\ChatServer.exe
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\ChatServer\bin\Debug\ChatServer.pdb
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\ChatServer\obj\Debug\ChatServer.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\ChatServer\obj\Debug\ChatServer.csproj.SuggestedBindingRedirects.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\ChatServer\obj\Debug\ChatServer.Form1.resources
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\ChatServer\obj\Debug\ChatServer.Properties.Resources.resources
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\ChatServer\obj\Debug\ChatServer.csproj.GenerateResource.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\ChatServer\obj\Debug\ChatServer.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\ChatServer\obj\Debug\ChatServer.exe
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\ChatServer\obj\Debug\ChatServer.pdb

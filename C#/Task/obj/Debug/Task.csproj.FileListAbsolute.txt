@@ -1,0 +1,12 @@
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Task\bin\Debug\Task.exe.config
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Task\bin\Debug\Task.exe
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Task\bin\Debug\Task.pdb
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Task\obj\Debug\Task.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Task\obj\Debug\Task.csproj.SuggestedBindingRedirects.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Task\obj\Debug\Task.Form1.resources
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Task\obj\Debug\Task.Properties.Resources.resources
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Task\obj\Debug\Task.csproj.GenerateResource.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Task\obj\Debug\Task.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Task\obj\Debug\Task.exe
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Task\obj\Debug\Task.pdb
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Task\obj\Debug\Task.Form2.resources

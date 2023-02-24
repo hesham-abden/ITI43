@@ -13,3 +13,11 @@ C:\Users\Dell\source\repos\LAB6\obj\Debug\net6.0\refint\LAB6.dll
 C:\Users\Dell\source\repos\LAB6\obj\Debug\net6.0\LAB6.pdb
 C:\Users\Dell\source\repos\LAB6\obj\Debug\net6.0\LAB6.genruntimeconfig.cache
 C:\Users\Dell\source\repos\LAB6\obj\Debug\net6.0\ref\LAB6.dll
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\LAB6\obj\Debug\net6.0\LAB6.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\LAB6\obj\Debug\net6.0\LAB6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\LAB6\obj\Debug\net6.0\LAB6.AssemblyInfoInputs.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\LAB6\obj\Debug\net6.0\LAB6.AssemblyInfo.cs
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\LAB6\obj\Debug\net6.0\LAB6.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\LAB6\obj\Debug\net6.0\LAB6.dll
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\LAB6\obj\Debug\net6.0\refint\LAB6.dll
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\LAB6\obj\Debug\net6.0\LAB6.pdb

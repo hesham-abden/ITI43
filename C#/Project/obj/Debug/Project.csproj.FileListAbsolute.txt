@@ -1,0 +1,11 @@
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Project\bin\Debug\Project.exe.config
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Project\bin\Debug\Project.exe
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Project\bin\Debug\Project.pdb
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Project\obj\Debug\Project.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Project\obj\Debug\Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Project\obj\Debug\Project.Form1.resources
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Project\obj\Debug\Project.exe
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\Project\obj\Debug\Project.pdb
