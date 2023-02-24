@@ -30,6 +30,7 @@ namespace Project
         int col_num;
         Point[,] points;
         int turn = 1;
+        Boolean game_mode=false;
         public Form1()
         {
             InitializeComponent();
@@ -44,9 +45,8 @@ namespace Project
             Board_columns = Board_length / Circle_Size;
             Board = new int[Board_rows, Board_columns];
             points = new Point[Board_rows, Board_columns];
-            row_num = 3;
             col_num = Board_columns;
-            
+            game_mode = true;   
             
 
         }
@@ -96,7 +96,8 @@ namespace Project
                         Board[row_num, col_num] = 2;
                         turn = 1;   
                     }
-
+                    Hori_Verti_Checker(row_num, col_num);
+                    
                 }
             }
             
@@ -116,6 +117,40 @@ namespace Project
                 }
                 richTextBox1.AppendText("\n");
             }
+        }
+        private void Hori_Verti_Checker(int row,int col)
+        {
+            
+            
+           
+                   //horizontal checker                 
+                for (int i = 0; i < Board_columns-3; i++)
+                {
+                    if(Board[row, i] == 1&&
+                        Board[row, i+1] == 1 &&
+                        Board[row, i+2] == 1 &&
+                        Board[row, i+3] == 1 )
+                    {
+
+                        MessageBox.Show("winner");
+                    }
+                    
+                }
+                //vertical checker
+                for (int i = 0; i < Board_rows - 3; i++)
+                {
+                    if (Board[i, col] == 1 &&
+                        Board[i+1, col] == 1 &&
+                        Board[i+2, col] == 1 &&
+                        Board[i+3, col] == 1)
+                    {
+
+                        MessageBox.Show("winner");
+                    }
+
+                }
+
+
         }
     }
 }
