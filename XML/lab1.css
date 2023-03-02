@@ -1,0 +1,10 @@
+Employees
+{
+    background-color: red;
+    color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    flex-shrink: 1;
+}

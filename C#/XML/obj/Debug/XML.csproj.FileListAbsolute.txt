@@ -1,0 +1,11 @@
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\XML\bin\Debug\XML.exe.config
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\XML\bin\Debug\XML.exe
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\XML\bin\Debug\XML.pdb
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\XML\obj\Debug\XML.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\XML\obj\Debug\XML.csproj.SuggestedBindingRedirects.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\XML\obj\Debug\XML.Properties.Resources.resources
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\XML\obj\Debug\XML.csproj.GenerateResource.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\XML\obj\Debug\XML.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\XML\obj\Debug\XML.exe
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\XML\obj\Debug\XML.pdb
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\XML\obj\Debug\XML.Form1.resources

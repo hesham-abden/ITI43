@@ -66,13 +66,13 @@ namespace ChatServer
         {
             
             server.Start();
-            Thread thread = new Thread(() =>
-            {   
-                socket = server.AcceptSocket();
-                stream = new NetworkStream(socket);
-            });
-            thread.Start();
-            
+            //Thread thread = new Thread(() =>
+            //{   
+            //    socket = server.AcceptSocket();
+            //    stream = new NetworkStream(socket);
+            //});
+            //thread.Start();
+            backgroundWorker1.RunWorkerAsync();
             
             
 
@@ -119,6 +119,16 @@ namespace ChatServer
         {
             if(m!=n)
             richTextBox1.AppendText("Client :" + m + "\n");
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            while (true)
+            {
+                socket = server.AcceptSocket();
+                stream = new NetworkStream(socket);
+                if (socket != null) { break; }
+            }
         }
     }
 }

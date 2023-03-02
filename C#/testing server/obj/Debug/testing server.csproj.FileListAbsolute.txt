@@ -1,0 +1,11 @@
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\testing server\bin\Debug\testing server.exe.config
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\testing server\bin\Debug\testing server.exe
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\testing server\bin\Debug\testing server.pdb
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\testing server\obj\Debug\testing server.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\testing server\obj\Debug\testing server.csproj.SuggestedBindingRedirects.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\testing server\obj\Debug\testing_server.Properties.Resources.resources
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\testing server\obj\Debug\testing_server.Server.resources
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\testing server\obj\Debug\testing server.csproj.GenerateResource.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\testing server\obj\Debug\testing server.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\testing server\obj\Debug\testing server.exe
+C:\Users\Dell\Desktop\OldFiles\gitclone\iti43\C#\testing server\obj\Debug\testing server.pdb
