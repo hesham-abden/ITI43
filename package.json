@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/hesham-abden/iti43#readme",
   "dependencies": {
-    "bootstrap": "^5.3.0-alpha1"
+    "bootstrap": "^5.3.0-alpha1",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3"
   }
 }

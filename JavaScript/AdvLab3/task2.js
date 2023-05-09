@@ -175,7 +175,7 @@ var C1=new Car(10,10,10,"XYA",10,5,5);
 //======================================================\\
 console.log(vec1.toString())
 console.log(bi1.toString())
-console.log(M1.toString())             //overidden method inhertied from Vehicle
+console.log(M1.toString())             //overidden method inhertied from Vehicle    
 console.log(DT1.toString())
 console.log(C1.toString())
 //=============================================================\\

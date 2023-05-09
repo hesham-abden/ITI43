@@ -11,13 +11,15 @@ using System.Net;
 using System.Net.Sockets;
 using System.IO;
 using System.Threading;
+using System.Runtime.Serialization.Formatters.Binary;
+
 namespace ChatServer
 {
-    
+
     public partial class Form1 : Form
     {
         static int port = 9999;
-        static IPAddress address= IPAddress.Parse("127.0.0.1");
+        static IPAddress address = IPAddress.Parse("127.0.0.1");
         Socket socket;
         TcpListener server = new TcpListener(address, port);
         NetworkStream stream;
@@ -32,29 +34,29 @@ namespace ChatServer
             InitializeComponent();
             richTextBox1.Text = "";
 
-            
+
             Thread reading = new Thread(() =>
             {
-                while (true)
+                while (false)
                 {
-                    if (stream!=null)
+                    if (stream != null)
                     {
                         bRead = new BinaryReader(stream);
                         m = bRead.ReadString();
-                        
+
                         Invoke(new Action(() =>
                         {
                             richTextBox1.AppendText("Client :" + m + "\n");
                         }));
-                        
-                        
+
+
                         stream.Flush();
 
                     }
                 }
             });
             reading.Start();
-            
+
 
         }
 
@@ -64,7 +66,7 @@ namespace ChatServer
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             server.Start();
             //Thread thread = new Thread(() =>
             //{   
@@ -73,8 +75,8 @@ namespace ChatServer
             //});
             //thread.Start();
             backgroundWorker1.RunWorkerAsync();
-            
-            
+
+
 
         }
 
@@ -88,20 +90,18 @@ namespace ChatServer
                 socket.Shutdown(SocketShutdown.Both);
                 socket.Close();
             }
-            
-            
+
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            Class1 obj = new Class1();
+            obj.Name = "hello";
+            binaryFormatter.Serialize(stream, obj);
+            stream.Flush();
 
-
-
-            
-
-
-           
-            
 
         }
 
@@ -113,12 +113,12 @@ namespace ChatServer
                 bWrite.Write(textBox1.Text);
                 richTextBox1.AppendText("Server :" + textBox1.Text + "\n");
             }
-            
+
         }
         public void write(string m)
         {
-            if(m!=n)
-            richTextBox1.AppendText("Client :" + m + "\n");
+            if (m != n)
+                richTextBox1.AppendText("Client :" + m + "\n");
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
